@@ -1,12 +1,11 @@
 name: Versioning & deploy
 
 on:
-    pull_request:
+    pull_request_target:       
         branches:
             - master
         types:
-            - closed
-
+            - closed       
 jobs:
     version:
         if: github.event.pull_request.merged == true
